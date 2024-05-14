@@ -68,14 +68,14 @@ $border-button = 8px
   --fsh2: 'calc(%s + 11px)' % var(--fsp)
   --fsh3: 'calc(%s + 7px)' % var(--fsp)
   --fsh4: 'calc(%s + 4px)' % var(--fsp)
-  
+
   // 侧边栏文字内容宽度
   --side-content-width: 224px
   // 元素轮廓到容器边缘的间距
   --gap-margin: 16px
   // 元素文本内容到元素自身的轮廓的间距
   --gap-padding: 16px
-  
+
   --gap-p: 'calc(%s + 4px)' % $fs-body // gap for paragraph
   --gap-p-compact: 'calc(%s * 0.75)' % $fs-body
   // desktop 2k or larger
@@ -102,3 +102,30 @@ $boxshadow-card-float = 0 12px 16px -4px rgba(0, 0, 0, 0.2)
 $boxshadow-button = 0 0 2px 0px rgba(0, 0, 0, 0.04), 0 0 8px 0px rgba(0, 0, 0, 0.04)
 $boxshadow-block = 0 1px 4px 0px rgba(0, 0, 0, 0.02), 0 2px 8px 0px rgba(0, 0, 0, 0.02)
 $boxshadow-toast = 0 4px 8px 0px rgba(0, 0, 0, 0.1), 0 12px 16px -4px rgba(0, 0, 0, 0.2)
+
+// table center
+table:not([class])
+  width: fit-content
+  margin-left: auto !important
+  margin-right: auto !important
+
+// block quote
+// .md-text blockquote ol code, .md-text blockquote p code, .md-text blockquote ul code, .md-text ol ol code, .md-text ol p code, .md-text ol ul code, .md-text ul ol code, .md-text ul p code, .md-text ul ul code {
+//   font-size: 12.75px !important
+// }
+
+// waline editor
+.wl-editor, .wl-input
+  font-family: $ff-body
+
+// markdown image title
+figure figcaption
+    display: flex
+    justify-content: center
+    padding: 0.5rem 0
+    font-size: $fs-13
+    color: var(--text-p2)
+    line-height: 1.5
+    text-align: justify
+    &:empty
+      display: none
